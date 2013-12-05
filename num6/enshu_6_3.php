@@ -21,5 +21,5 @@ function show_form($errors = ''){
   // エラーがなければ↓
   print '<form method="POST" action="'.$_SERVER['PHP_SELF'].'">
 
-
+  // コメントです。
 ?>
