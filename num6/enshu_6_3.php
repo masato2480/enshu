@@ -72,7 +72,9 @@ function process_form(){ // 実際に演算を実行する。
   }elseif('/' == $_POST['operator']){
      $total = $_POST['operand_1'] / $_POST['operand_2'];
   }
-  print '$_POST[operand_1] $_POST[operator] $_POST[operand_2] = $total';
+  print "$_POST[operand_1] $_POST[operator] $_POST[operand_2] = $total";
+  print '<br/>';
+  print 'calculating finished!!! ^p^/';
 }
 
 
