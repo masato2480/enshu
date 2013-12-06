@@ -43,7 +43,7 @@
 
      //１番目の住所
      print '<tr><th colspan="2">From</th></tr>';
-     print '<td>Name:</td><td>';
+     print '<tr><td>Name:</td><td>';
      input_text('name_1', $_POST);
      print '</td></tr>';
      print '<tr><td>Street Address:</td><td>';
@@ -58,7 +58,7 @@
      
      //２番目の住所
      print '<tr><th colspan="2">From</th></tr>';
-     print '<td>Name:</td><td>';
+     print '<tr><td>Name:</td><td>';
      input_text('name_2', $_POST);
      print '</td></tr>';
      print '<tr><td>Street Address:</td><td>';
