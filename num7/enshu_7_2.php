@@ -1,7 +1,9 @@
 <?php
-  require 'DB.php';
-  require 'formhelper.php'; //フォーム要素出力関数をロードする。
-
+  /*
+  print 'hello';
+  
+  require 'Users/nishiyamamasato/DB-1.7.6/DB-1.7.6/DB.php';
+  require '/Library/WebServer/Documents/enshu/num7/formhelpers.php'; //フォーム要素出力関数をロードする。
   $db = DB::connect('mysqli://nishiyamamasato:nmst0117@localhost/dishes');
   if (DB::isError($db)) { die("Can't connect: " . $db->getMessage()); }
   $db->setErrorHandling(PEAR_ERROR_DIE);
@@ -13,30 +15,34 @@
         process_form();
      }
   } else {
-     show_form();
+    show_form();
   }
   function show_form($errors = '') {
-     if ($errors) {
+    if ($errors) {
         print 'You need to correct the following errors: <ul><li>';
-        print 'implode('</li><li>',$errors);
+        print 'implode('</li><li>',$errors)';
         print '</li></ul>';
      }
+     */  
+     //require '/Library/WebServer/Documents/enshu/num7/formhelpers.php';
      //フォーム始まり
-     print '<form method="POST" cation="' . $_SERVER['PHP_SELF'] . '">';
+     print '<form method="POST" action="' . $_SERVER['PHP_SELF'] . '">';
      print '<table>';
      
      //値段
      print '<tr><td>Price:</td><td>';
-     input_text('price', $_POST);
+     //input_text('price', $_POST);
      print '</td></tr>';
-
+     
      //フォーム終了
-     print '<tr><td colspan="2"><input type="submit" value="Search Dishes">";
+     print '<tr><td colspan="2"><input type="submit" value="Search Dishes">';
      print '</td></tr>';
      print '</table>';
-     print '<input type="hidden" name="_submit_check" value="1"/>";
+     print '<input type="hidden" name="_submit_check" value="1"/>';
      print '</form>';
+    /*
   }
+  
   function validate_form(){
      $errors = array();
      if(! strval(floatval($_POST['price'])) == $_POST['price']){
@@ -54,8 +60,10 @@
         foreach ($dishes as $dish) {
            print "<li> $dish[dish_name] ($dish[price])</li>";
         }
+    print '</ul>';
      } else {
         print 'No dishes match!!!';
      }
   }
+  */
 ?>
